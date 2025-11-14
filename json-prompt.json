@@ -1,0 +1,147 @@
+the json prompt mvp = {
+  "project": "POTI PATI E-commerce MVP",
+  "description": "Bilingual (Arabic/French) e-commerce store with solid orange color palette, Algerian logistics, and Shopify-style UI",
+  "brand": {
+    "name": "POTI PATI",
+    "primary_color": "#FF6B6B",
+    "secondary_color": "#FF8C42",
+    "accent_color": "#FFD166",
+    "theme": "solid colors (no gradients)",
+    "style": "rounded corners, 3D micro-interactions"
+  },
+  "stack": {
+    "frontend": ["Bootstrap 5.3", "Font Awesome 6", "CSS only (no JS)"],
+    "backend": "PHP/MySQL",
+    "installer": "Web-based",
+    "hosting": "XAMPP & shared hosting compatible"
+  },
+  "features": {
+    "bilingual": {
+      "languages": ["ar", "fr"],
+      "rtl_ltr": true,
+      "dynamic_switcher": true
+    },
+    "logistics": {
+      "wilayas": 58,
+      "communes": 1541,
+      "dynamic_dropdowns": true,
+      "ajax_loading": true
+    },
+    "ordering": {
+      "guest_orders": true,
+      "no_account_needed": true,
+      "cod_marketing": true,
+      "variant_selector": true,
+      "color_size": true
+    },
+    "admin": {
+      "dashboard": true,
+      "orders_management": true,
+      "products_crud": true,
+      "categories_crud": true,
+      "theme_customizer": true,
+      "settings_panel": true
+    },
+    "theme": {
+      "orange_palette": true,
+      "rounded_corners": true,
+      "solid_colors": true,
+      "3d_effects": true
+    },
+    "social": {
+      "whatsapp_integration": true,
+      "social_proof_widget": true,
+      "brand_logo_showcase": true
+    },
+    "pages": {
+      "homepage": true,
+      "product_page": true,
+      "order_page": true,
+      "success_page": true,
+      "contact_page": true,
+      "about_page": true,
+      "admin_pages": true
+    }
+  },
+  "file_structure": {
+    "root": [
+      "index.html",
+      "product.html", 
+      "order.html",
+      "success.html",
+      "contact.html",
+      "about.html",
+      "assets/css/style.css",
+      "assets/js/main.js",
+      "admin/",
+      "api/",
+      "includes/",
+      "install/",
+      "README.md"
+    ],
+    "admin": [
+      "dashboard.html",
+      "orders.html",
+      "products.html", 
+      "categories.html",
+      "theme.html",
+      "settings.html",
+      "login.html"
+    ],
+    "api": [
+      "products.php",
+      "orders.php", 
+      "wilayas.php",
+      "communes.php"
+    ]
+  },
+  "database_schema": {
+    "tables": [
+      "admin",
+      "wilayas", 
+      "communes",
+      "categories",
+      "products", 
+      "product_attributes",
+      "orders",
+      "order_items",
+      "brand_logos",
+      "settings",
+      "pages"
+    ]
+  },
+  "ui_kit": {
+    "components": [
+      "buttons",
+      "cards", 
+      "forms",
+      "navigation",
+      "badges",
+      "tables",
+      "social_buttons"
+    ],
+    "colors": {
+      "primary": "#FF6B6B",
+      "secondary": "#FF8C42", 
+      "accent": "#FFD166",
+      "neutral": "#F8F9FA",
+      "text": "#333"
+    },
+    "design": {
+      "radius": "24px",
+      "shadow": "0 8px 30px rgba(255,107,107,0.15)",
+      "transition": "all 0.3s ease"
+    }
+  },
+  "deployment": {
+    "one_click_installer": true,
+    "auto_config_generation": true,
+    "shared_hosting_compatible": true
+  },
+  "performance": {
+    "no_frameworks": true,
+    "pure_css": true,
+    "responsive_design": true,
+    "fast_loading": true
+  }
+}
