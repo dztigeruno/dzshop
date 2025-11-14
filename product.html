@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تفاصيل المنتج - POTI PATI</title>
+    
+    <!-- Bootstrap 5.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <!-- Language Switcher -->
+    <div class="language-switcher bg-primary text-white py-2">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center">
+                <div class="d-flex align-items-center">
+                    <i class="fas fa-globe me-2"></i>
+                    <span data-translate="language">اللغة</span>
+                </div>
+                <div class="btn-group" role="group">
+                    <button type="button" class="btn btn-light btn-sm lang-btn active" data-lang="ar">
+                        <img src="https://flagcdn.com/w20/dz.png" alt="العربية" class="me-1">
+                        العربية
+                    </button>
+                    <button type="button" class="btn btn-outline-light btn-sm lang-btn" data-lang="fr">
+                        <img src="https://flagcdn.com/w20/fr.png" alt="Français" class="me-1">
+                        Français
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-primary" href="index.html">
+                <i class="fas fa-shopping-bag me-2"></i>POTI PATI
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html" data-translate="home">الرئيسية</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="product.html" data-translate="product">المنتج</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html" data-translate="about">من نحن</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html" data-translate="contact">اتصل بنا</a>
+                    </li>
+                </ul>
+                
+                <div class="d-flex align-items-center">
+                    <button class="btn btn-outline-primary me-2" data-translate="cart">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="badge bg-secondary ms-1">0</span>
+                    </button>
+                    <a href="admin/login.html" class="btn btn-primary" data-translate="admin">لوحة التحكم</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Product Details Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row g-5">
+                <!-- Product Images -->
+                <div class="col-lg-6">
+                    <div class="product-gallery">
+                        <div class="main-image mb-3">
+                            <img src="https://via.placeholder.com/600x600/FF6B6B/FFFFFF?text=منتج+رئيسي" 
+                                 alt="صورة المنتج الرئيسية" class="img-fluid rounded-3 shadow-3d" id="mainImage">
+                        </div>
+                        <div class="thumbnail-images d-flex gap-2">
+                            <img src="https://via.placeholder.com/100x100/FF6B6B/FFFFFF?text=1" 
+                                 alt="صورة مصغرة 1" class="thumbnail rounded-3 shadow-sm active" 
+                                 onclick="changeImage(this.src.replace('100x100', '600x600'))">
+                            <img src="https://via.placeholder.com/100x100/FF8C42/FFFFFF?text=2" 
+                                 alt="صورة مصغرة 2" class="thumbnail rounded-3 shadow-sm" 
+                                 onclick="changeImage(this.src.replace('100x100', '600x600'))">
+                            <img src="https://via.placeholder.com/100x100/FFD166/FFFFFF?text=3" 
+                                 alt="صورة مصغرة 3" class="thumbnail rounded-3 shadow-sm" 
+                                 onclick="changeImage(this.src.replace('100x100', '600x600'))">
+                            <img src="https://via.placeholder.com/100x100/FF6B6B/FFFFFF?text=4" 
+                                 alt="صورة مصغرة 4" class="thumbnail rounded-3 shadow-sm" 
+                                 onclick="changeImage(this.src.replace('100x100', '600x600'))">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Info -->
+                <div class="col-lg-6">
+                    <div class="product-info">
+                        <!-- Breadcrumb -->
+                        <nav aria-label="breadcrumb" class="mb-3">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="index.html">الرئيسية</a></li>
+                                <li class="breadcrumb-item"><a href="#">إلكترونيات</a></li>
+                                <li class="breadcrumb-item active">هاتف ذكي</li>
+                            </ol>
+                        </nav>
+
+                        <h1 class="product-title mb-3">هاتف ذكي ذكي - آخر إصدار</h1>
+                        
+                        <!-- Rating -->
+                        <div class="rating mb-3">
+                            <div class="d-flex align-items-center">
+                                <div class="stars me-2">
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star-half-alt text-warning"></i>
+                                </div>
+                                <span class="text-muted">(124 تقييم)</span>
+                            </div>
+                        </div>
+
+                        <!-- Price -->
+                        <div class="product-pricing mb-4">
+                            <div class="d-flex align-items-center">
+                                <span class="product-price text-primary fs-2 fw-bold me-3">15,999 د.ج</span>
+                                <span class="product-old-price text-decoration-line-through text-muted fs-5">19,999 د.ج</span>
+                                <span class="discount-badge bg-danger text-white px-2 py-1 rounded ms-2">-20%</span>
+                            </div>
+                            <p class="text-success mb-0">وفر 4,000 د.ج</p>
+                        </div>
+
+                        <!-- Product Description -->
+                        <div class="product-description mb-4">
+                            <h5 class="fw-bold mb-2">وصف المنتج</h5>
+                            <p class="text-muted">
+                                هاتف ذكي متطور بأحدث التقنيات، مع معالج قوي وكاميرا عالية الدقة وبطارية طويلة المدى.
+                                مثالي للاستخدام اليومي والمهني، يدعم جميع التطبيقات والألعاب الحديثة.
+                            </p>
+                        </div>
+
+                        <!-- Variants -->
+                        <div class="product-variants">
+                            <!-- Color Variants -->
+                            <div class="variant-group mb-4">
+                                <h6 class="variant-title">اللون</h6>
+                                <div class="variant-options">
+                                    <div class="color-variant active" 
+                                         data-color="أسود" 
+                                         data-value="black"
+                                         style="background-color: #333;"
+                                         onclick="selectVariant(this, 'color')">
+                                    </div>
+                                    <div class="color-variant" 
+                                         data-color="أبيض" 
+                                         data-value="white"
+                                         style="background-color: #fff; border: 2px solid #ddd;"
+                                         onclick="selectVariant(this, 'color')">
+                                    </div>
+                                    <div class="color-variant" 
+                                         data-color="أزرق" 
+                                         data-value="blue"
+                                         style="background-color: #0066cc;"
+                                         onclick="selectVariant(this, 'color')">
+                                    </div>
+                                    <div class="color-variant" 
+                                         data-color="أحمر" 
+                                         data-value="red"
+                                         style="background-color: #cc0000;"
+                                         onclick="selectVariant(this, 'color')">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Size Variants -->
+                            <div class="variant-group mb-4">
+                                <h6 class="variant-title">التخزين</h6>
+                                <div class="variant-options">
+                                    <div class="variant-option" 
+                                         data-value="128gb"
+                                         onclick="selectVariant(this, 'storage')">
+                                        128 جيجا
+                                    </div>
+                                    <div class="variant-option active" 
+                                         data-value="256gb"
+                                         onclick="selectVariant(this, 'storage')">
+                                        256 جيجا
+                                    </div>
+                                    <div class="variant-option" 
+                                         data-value="512gb"
+                                         onclick="selectVariant(this, 'storage')">
+                                        512 جيجا
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- RAM Variants -->
+                            <div class="variant-group mb-4">
+                                <h6 class="variant-title">الذاكرة</h6>
+                                <div class="variant-options">
+                                    <div class="variant-option" 
+                                         data-value="6gb"
+                                         onclick="selectVariant(this, 'ram')">
+                                        6 جيجا
+                                    </div>
+                                    <div class="variant-option active" 
+                                         data-value="8gb"
+                                         onclick="selectVariant(this, 'ram')">
+                                        8 جيجا
+                                    </div>
+                                    <div class="variant-option" 
+                                         data-value="12gb"
+                                         onclick="selectVariant(this, 'ram')">
+                                        12 جيجا
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Quantity -->
+                        <div class="quantity-selector mb-4">
+                            <h6 class="variant-title">الكمية</h6>
+                            <div class="input-group" style="width: 150px;">
+                                <button class="btn btn-outline-secondary" type="button" onclick="decreaseQuantity()">
+                                    <i class="fas fa-minus"></i>
+                                </button>
+                                <input type="number" class="form-control text-center" value="1" min="1" id="quantity">
+                                <button class="btn btn-outline-secondary" type="button" onclick="increaseQuantity()">
+                                    <i class="fas fa-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Action Buttons -->
+                        <div class="product-actions mb-4">
+                            <div class="d-grid gap-3 d-md-flex">
+                                <button class="btn btn-primary btn-lg flex-fill" onclick="addToCart()">
+                                    <i class="fas fa-shopping-cart me-2"></i>
+                                    أضف إلى السلة
+                                </button>
+                                <button class="btn btn-secondary btn-lg flex-fill" onclick="buyNow()">
+                                    <i class="fas fa-bolt me-2"></i>
+                                    اشتري الآن
+                                </button>
+                            </div>
+                            
+                            <div class="d-flex gap-2 mt-3">
+                                <button class="btn btn-outline-primary flex-fill" onclick="addToWishlist()">
+                                    <i class="far fa-heart me-2"></i>
+                                    favorites
+                                </button>
+                                <button class="btn btn-outline-secondary flex-fill" onclick="shareProduct()">
+                                    <i class="fas fa-share me-2"></i>
+                                    مشاركة
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Product Features -->
+                        <div class="product-features">
+                            <div class="row g-3">
+                                <div class="col-6">
+                                    <div class="feature-item d-flex align-items-center">
+                                        <i class="fas fa-shipping-fast text-primary me-2"></i>
+                                        <span>توصيل مجاني</span>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="feature-item d-flex align-items-center">
+                                        <i class="fas fa-undo text-primary me-2"></i>
+                                        <span>إرجاع خلال 30 يوم</span>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="feature-item d-flex align-items-center">
+                                        <i class="fas fa-shield-alt text-primary me-2"></i>
+                                        <span>ضمان سنة واحدة</span>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="feature-item d-flex align-items-center">
+                                        <i class="fas fa-headset text-primary me-2"></i>
+                                        <span>دعم 24/7</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Specifications -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h3 class="fw-bold mb-4">المواصفات التقنية</h3>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <table class="table table-striped">
+                                <tbody>
+                                    <tr>
+                                        <td class="fw-bold">المعالج</td>
+                                        <td>Snapdragon 8 Gen 2</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-bold">الشاشة</td>
+                                        <td>6.7 بوصة AMOLED</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-bold">الدقة</td>
+                                        <td>3200 × 1440 بكسل</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-bold">معدل التحديث</td>
+                                        <td>120 هرتز</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="col-lg-6">
+                            <table class="table table-striped">
+                                <tbody>
+                                    <tr>
+                                        <td class="fw-bold">الكاميرا الرئيسية</td>
+                                        <td>50 ميجابكسل</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-bold">البطارية</td>
+                                        <td>5000 مللي أمبير</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-bold">الشحن السريع</td>
+                                        <td>65 واط</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-bold">نظام التشغيل</td>
+                                        <td>Android 14</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Products -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row text-center mb-5">
+                <div class="col-12">
+                    <h3 class="fw-bold text-primary">منتجات مشابهة</h3>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <div class="card product-card h-100">
+                        <div class="product-image">
+                            <img src="https://via.placeholder.com/300x300/FF8C42/FFFFFF?text=منتج+1" alt="منتج مشابه">
+                            <div class="product-badge">جديد</div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="product-title">جهاز لوحي ذكي</h5>
+                            <div class="product-price">12,999 د.ج</div>
+                            <button class="btn btn-primary w-100 mt-2">أضف إلى السلة</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="card product-card h-100">
+                        <div class="product-image">
+                            <img src="https://via.placeholder.com/300x300/FFD166/333?text=منتج+2" alt="منتج مشابه">
+                            <div class="product-badge bg-warning">خصم</div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="product-title">سماعات لاسلكية</h5>
+                            <div class="product-price">8,999 د.ج</div>
+                            <button class="btn btn-primary w-100 mt-2">أضف إلى السلة</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="card product-card h-100">
+                        <div class="product-image">
+                            <img src="https://via.placeholder.com/300x300/FF6B6B/FFFFFF?text=منتج+3" alt="منتج مشابه">
+                            <div class="product-badge">أفضل مبيعات</div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="product-title">ساعة ذكية</h5>
+                            <div class="product-price">25,999 د.ج</div>
+                            <button class="btn btn-primary w-100 mt-2">أضف إلى السلة</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="card product-card h-100">
+                        <div class="product-image">
+                            <img src="https://via.placeholder.com/300x300/28A745/FFFFFF?text=منتج+4" alt="منتج مشابه">
+                            <div class="product-badge bg-success">متوفر</div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="product-title">كاميرا احترافية</h5>
+                            <div class="product-price">45,999 د.ج</div>
+                            <button class="btn btn-primary w-100 mt-2">أضف إلى السلة</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WhatsApp Integration -->
+    <div class="whatsapp-float">
+        <a href="https://wa.me/213555123456?text=مرحباً، أريد الاستفسار عن هذا المنتج" 
+           target="_blank" class="btn btn-success rounded-circle shadow-3d">
+            <i class="fab fa-whatsapp fa-2x"></i>
+        </a>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <h5 class="fw-bold mb-3">
+                        <i class="fas fa-shopping-bag me-2 text-primary"></i>POTI PATI
+                    </h5>
+                    <p>متجرك الإلكتروني الأول للتسوق الآمن في الجزائر</p>
+                </div>
+                <div class="col-lg-2">
+                    <h6 class="fw-bold mb-3">روابط سريعة</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-light text-decoration-none">الرئيسية</a></li>
+                        <li><a href="about.html" class="text-light text-decoration-none">من نحن</a></li>
+                        <li><a href="contact.html" class="text-light text-decoration-none">اتصل بنا</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <h6 class="fw-bold mb-3">معلومات التواصل</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-2">
+                            <i class="fas fa-phone me-2 text-primary"></i>
+                            +213 555 123 456
+                        </li>
+                        <li class="mb-2">
+                            <i class="fas fa-envelope me-2 text-primary"></i>
+                            info@potipati.dz
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <h6 class="fw-bold mb-3">النشرة الإخبارية</h6>
+                    <form class="newsletter-form">
+                        <div class="input-group">
+                            <input type="email" class="form-control" placeholder="بريدك الإلكتروني">
+                            <button class="btn btn-primary" type="submit">
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="mb-0">© 2024 POTI PATI. جميع الحقوق محفوظة.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5.3 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="assets/js/main.js"></script>
+
+    <!-- Product Page JS -->
+    <script>
+        // Product page functionality
+        let selectedVariants = {
+            color: 'black',
+            storage: '256gb',
+            ram: '8gb'
+        };
+
+        function changeImage(src) {
+            document.getElementById('mainImage').src = src;
+            
+            // Update active thumbnail
+            document.querySelectorAll('.thumbnail').forEach(thumb => {
+                thumb.classList.remove('active');
+            });
+            event.target.classList.add('active');
+        }
+
+        function selectVariant(element, type) {
+            // Update active state for the specific variant type
+            const siblings = element.parentElement.querySelectorAll(`.${element.className.split(' ')[0]}`);
+            siblings.forEach(sibling => sibling.classList.remove('active'));
+            element.classList.add('active');
+            
+            // Store selected variant
+            selectedVariants[type] = element.dataset.value;
+            
+            // Add selection animation
+            element.style.transform = 'scale(1.1)';
+            setTimeout(() => {
+                element.style.transform = 'scale(1)';
+            }, 200);
+        }
+
+        function increaseQuantity() {
+            const quantityInput = document.getElementById('quantity');
+            quantityInput.value = parseInt(quantityInput.value) + 1;
+        }
+
+        function decreaseQuantity() {
+            const quantityInput = document.getElementById('quantity');
+            if (parseInt(quantityInput.value) > 1) {
+                quantityInput.value = parseInt(quantityInput.value) - 1;
+            }
+        }
+
+        function addToCart() {
+            const quantity = document.getElementById('quantity').value;
+            
+            // Show success message
+            showNotification('تم إضافة المنتج إلى السلة بنجاح!', 'success');
+            
+            // Add cart animation
+            const cartButton = event.target.closest('button');
+            cartButton.innerHTML = '<i class="fas fa-check me-2"></i>تم الإضافة!';
+            cartButton.classList.add('btn-success');
+            cartButton.classList.remove('btn-primary');
+            
+            setTimeout(() => {
+                cartButton.innerHTML = '<i class="fas fa-shopping-cart me-2"></i>أضف إلى السلة';
+                cartButton.classList.remove('btn-success');
+                cartButton.classList.add('btn-primary');
+            }, 2000);
+        }
+
+        function buyNow() {
+            const quantity = document.getElementById('quantity').value;
+            const variants = { ...selectedVariants };
+            
+            // Store product details for checkout
+            localStorage.setItem('selectedProduct', JSON.stringify({
+                id: 'product-1',
+                name: 'هاتف ذكي ذكي - آخر إصدار',
+                price: 15999,
+                quantity: quantity,
+                variants: variants,
+                image: 'https://via.placeholder.com/600x600/FF6B6B/FFFFFF?text=منتج+رئيسي'
+            }));
+            
+            // Redirect to order page
+            window.location.href = 'order.html';
+        }
+
+        function addToWishlist() {
+            showNotification('تم إضافة المنتج إلى المفضلة!', 'info');
+            
+            const button = event.target.closest('button');
+            const icon = button.querySelector('i');
+            
+            if (icon.classList.contains('far')) {
+                icon.classList.remove('far');
+                icon.classList.add('fas');
+                button.classList.remove('btn-outline-primary');
+                button.classList.add('btn-primary');
+            } else {
+                icon.classList.remove('fas');
+                icon.classList.add('far');
+                button.classList.remove('btn-primary');
+                button.classList.add('btn-outline-primary');
+            }
+        }
+
+        function shareProduct() {
+            if (navigator.share) {
+                navigator.share({
+                    title: 'POTI PATI - هاتف ذكي ذكي',
+                    text: 'شاهد هذا المنتج الرائع في POTI PATI',
+                    url: window.location.href
+                });
+            } else {
+                // Fallback for browsers that don't support Web Share API
+                const url = encodeURIComponent(window.location.href);
+                const text = encodeURIComponent('شاهد هذا المنتج الرائع في POTI PATI');
+                window.open(`https://wa.me/?text=${text}%20${url}`, '_blank');
+            }
+        }
+
+        function showNotification(message, type = 'info') {
+            // Create notification element
+            const notification = document.createElement('div');
+            notification.className = `alert alert-${type} alert-dismissible fade show position-fixed`;
+            notification.style.cssText = 'top: 20px; right: 20px; z-index: 9999; min-width: 300px;';
+            notification.innerHTML = `
+                ${message}
+                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+            `;
+            
+            document.body.appendChild(notification);
+            
+            // Auto remove after 3 seconds
+            setTimeout(() => {
+                if (notification.parentNode) {
+                    notification.remove();
+                }
+            }, 3000);
+        }
+
+        // Initialize product page
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add hover effects to thumbnails
+            document.querySelectorAll('.thumbnail').forEach(thumb => {
+                thumb.addEventListener('mouseenter', function() {
+                    this.style.transform = 'scale(1.05)';
+                });
+                
+                thumb.addEventListener('mouseleave', function() {
+                    if (!this.classList.contains('active')) {
+                        this.style.transform = 'scale(1)';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
